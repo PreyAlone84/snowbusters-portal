@@ -18,12 +18,12 @@ const cameras: Camera[] = [
 
   {
     id: "gorny",
-    name: "Учебный 1",
+    name: "Учебный, камера 1",
     url: "https://www.rider74.ru/camera/tubing"
   },
   {
     id: "extrem",
-    name: "Учебный 2",
+    name: "Учебный, камера 2",
     url: "https://www.rider74.ru/camera/skipark"
   }
 ];
