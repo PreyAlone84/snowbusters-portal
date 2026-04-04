@@ -1,0 +1,29 @@
+// src/components/Button/Button.module.scss
+@use 'sass:color';
+
+.button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+  
+  &.primary {
+    background-color: var(--primary-color);
+    color: white;
+    
+    &:hover {
+      background-color: color.adjust(#3b82f6, $lightness: -10%);
+    }
+  }
+  
+  &.secondary {
+    background-color: var(--secondary-color);
+    color: white;
+    
+    &:hover {
+      background-color: color.adjust(#6b7280, $lightness: -10%);
+    }
+  }
+}
