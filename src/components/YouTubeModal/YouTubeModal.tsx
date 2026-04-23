@@ -13,7 +13,7 @@ export function YouTubeModal({ videoUrl, isOpen, onClose }: YouTubeModalProps) {
   
   if (!videoId) return null;
 
-  const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&fs=1`;
+  const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&controls=1&showinfo=0&autohide=1&rel=0`;
 
   return (
     <Dialog.Root open={isOpen} onOpenChange={onClose}>
@@ -26,8 +26,9 @@ export function YouTubeModal({ videoUrl, isOpen, onClose }: YouTubeModalProps) {
           <iframe
             src={embedUrl}
             className={styles.iframe}
-            allow="autoplay; encrypted-media; fullscreen"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
             allowFullScreen
+            allowTransparency
             title="YouTube video"
           />
         </Dialog.Content>

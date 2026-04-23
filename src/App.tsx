@@ -1,9 +1,10 @@
-import { Routes, Route } from 'react-router-dom';
-import { Layout } from './components/Layout/Layout';
-import { CamerasPage } from './pages/CamerasPage';
-import { ChannelsPage } from './pages/ChannelsPage';
-import { TricksPage } from './pages/TricksPage';
-import { TrickDetailPage } from './pages/TrickDetailPage';
+import { Routes, Route } from "react-router-dom";
+import { Layout } from "./components/Layout/Layout";
+import { CamerasPage } from "./pages/CamerasPage";
+import { ChannelsPage } from "./pages/ChannelsPage";
+import { TricksPage } from "./pages/TricksPage";
+import { TrickDetailPage } from "./pages/TrickDetailPage";
+import { CommunityPage } from "./pages/CommunityPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/channels" element={<ChannelsPage />} />
         <Route path="/tricks" element={<TricksPage />} />
         <Route path="/tricks/:id" element={<TrickDetailPage />} />
+        <Route path="/community" element={<CommunityPage />} />
       </Routes>
     </Layout>
   );
