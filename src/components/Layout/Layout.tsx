@@ -5,7 +5,7 @@ import styles from "./Layout.module.scss";
 import { cn } from "../../utils/cn";
 
 const navItems = [
-  { to: "/", icon: Video, label: "Камеры" },
+  { to: "/cameras", icon: Video, label: "Камеры" },
   { to: "/channels", icon: Youtube, label: "Каналы" },
   { to: "/tricks", icon: Sparkles, label: "Трюки" },
   { to: "/community", icon: Users, label: "Community" }
@@ -17,7 +17,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className={styles.layout}>
       <aside className={cn(styles.sidebar, mobileOpen && styles.sidebarOpen)}>
-        <div className={styles.logo}>Snowbusters</div>
+        <NavLink to="/" className={styles.logo}>Snowbusters</NavLink>
         <nav className={styles.nav}>
           {navItems.map((item) => (
             <NavLink
